@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Empleos - Vacante</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/empleos.css">
+</head>
+<body>
+
+  <!-- NAVEGACIÓN -->
+  <nav>
+    <div class="nav-logo">Vacante</div>
+    <div class="nav-links">
+      <a href="../index.html">Inicio</a>
+      <a href="registro.html">Registrarse</a>
+      <a href="#" class="btn-login">Iniciar sesión</a>
+    </div>
+  </nav>
+
+  <!-- FILTROS -->
+  <section class="filtros">
+    <div class="filtros-inner">
+      <input type="text" placeholder="🔍 Buscar empleo...">
+      <select id="filtro-categoria">
+        <option value="">Todas las categorías</option>
+        <option value="tecnologia">💻 Tecnología</option>
+        <option value="salud">🏥 Salud</option>
+        <option value="construccion">🏗️ Construcción</option>
+        <option value="educacion">📚 Educación</option>
+        <option value="diseno">🎨 Diseño</option>
+        <option value="logistica">📦 Logística</option>
+        <option value="administracion">💼 Administración</option>
+        <option value="legal">⚖️ Legal</option>
+      </select>
+      <select id="filtro-tipo">
+        <option value="">Individual o equipo</option>
+        <option value="individual">👤 Individual</option>
+        <option value="equipo">👥 Equipo</option>
+      </select>
+      <select id="filtro-pais">
+        <option value="">Todos los países</option>
+        <option value="colombia">Colombia</option>
+        <option value="mexico">México</option>
+        <option value="argentina">Argentina</option>
+        <option value="chile">Chile</option>
+        <option value="peru">Perú</option>
+      </select>
+    </div>
+  </section>
+
+  <!-- LISTADO -->
+  <section class="empleos-section">
+    <div class="empleos-header">
+      <h2>Empleos disponibles</h2>
+      <span id="contador">8 resultados</span>
+    </div>
+    <div class="empleos-grid" id="empleos-grid">
+
+      <div class="empleo-card" data-categoria="tecnologia" data-tipo="individual" data-pais="colombia">
+        <div class="empleo-top">
+          <span class="badge badge-individual">👤 Individual</span>
+          <span class="badge badge-cat">💻 Tecnología</span>
+        </div>
+        <h3>Desarrollador Frontend</h3>
+        <p class="empresa">TechCo Colombia</p>
+        <p class="descripcion">Buscamos desarrollador con experiencia en React y TypeScript para equipo remoto.</p>
+        <div class="empleo-footer">
+          <span>🇨🇴 Colombia</span>
+          <button onclick="verDetalle()">Ver más</button>
+        </div>
+      </div>
+
+      <div class="empleo-card" data-categoria="diseno" data-tipo="equipo" data-pais="mexico">
+        <div class="empleo-top">
+          <span class="badge badge-equipo">👥 Equipo</span>
+          <span class="badge badge-cat">🎨 Diseño</span>
+        </div>
+        <h3>Equipo de Diseño UX/UI</h3>
+        <p class="empresa">StartupMX</p>
+        <p class="descripcion">Necesitamos un equipo de 3 diseñadores para rediseño completo de plataforma.</p>
+        <div class="empleo-footer">
+          <span>🇲🇽 México</span>
+          <button onclick="verDetalle()">Ver más</button>
+        </div>
+      </div>
+
+      <div class="empleo-card" data-categoria="salud" data-tipo="individual" data-pais="argentina">
+        <div class="empleo-top">
+          <span class="badge badge-individual">👤 Individual</span>
+          <span class="badge badge-cat">🏥 Salud</span>
+        </div>
+        <h3>Médico General</h3>
+        <p class="empresa">Clínica Buenos Aires</p>
+        <p class="descripcion">Clínica privada busca médico general para atención ambulatoria tiempo completo.</p>
+        <div class="empleo-footer">
+          <span>🇦🇷 Argentina</span>
+          <button onclick="verDetalle()">Ver más</button>
+        </div>
+      </div>
+
+      <div class="empleo-card" data-categoria="construccion" data-tipo="equipo" data-pais="chile">
+        <div class="empleo-top">
+          <span class="badge badge-equipo">👥 Equipo</span>
+          <span class="badge badge-cat">🏗️ Construcción</span>
+        </div>
+        <h3>Cuadrilla de Obra</h3>
+        <p class="empresa">Constructora del Sur</p>
+        <p class="descripcion">Proyecto residencial requiere equipo de 5 personas especializadas en obra gris.</p>
+        <div class="empleo-footer">
+          <span>🇨🇱 Chile</span>
+          <button onclick="verDetalle()">Ver más</button>
+        </div>
+      </div>
+
+      <div class="empleo-card" data-categoria="tecnologia" data-tipo="equipo" data-pais="colombia">
+        <div class="empleo-top">
+          <span class="badge badge-equipo">👥 Equipo</span>
+          <span class="badge badge-cat">💻 Tecnología</span>
+        </div>
+        <h3>Equipo de Desarrollo Web</h3>
+        <p class="empresa">AgenciaCO</p>
+        <p class="descripcion">Buscamos equipo completo: frontend, backend y QA para proyecto de 6 meses.</p>
+        <div class="empleo-footer">
+          <span>🇨🇴 Colombia</span>
+          <button onclick="verDetalle()">Ver más</button>
+        </div>
+      </div>
+
+      <div class="empleo-card" data-categoria="educacion" data-tipo="individual" data-pais="peru">
+        <div class="empleo-top">
+          <span class="badge badge-individual">👤 Individual</span>
+          <span class="badge badge-cat">📚 Educación</span>
+        </div>
+        <h3>Profesor de Matemáticas</h3>
+        <p class="empresa">Colegio Lima Norte</p>
+        <p class="descripcion">Institución educativa busca profesor de matemáticas para secundaria, modalidad presencial.</p>
+        <div class="empleo-footer">
+          <span>🇵🇪 Perú</span>
+          <button onclick="verDetalle()">Ver más</button>
+        </div>
+      </div>
+
+      <div class="empleo-card" data-categoria="logistica" data-tipo="individual" data-pais="colombia">
+        <div class="empleo-top">
+          <span class="badge badge-individual">👤 Individual</span>
+          <span class="badge badge-cat">📦 Logística</span>
+        </div>
+        <h3>Coordinador de Logística</h3>
+        <p class="empresa">Distribuidora Nacional</p>
+        <p class="descripcion">Empresa de distribución busca coordinador con experiencia en cadena de suministro.</p>
+        <div class="empleo-footer">
+          <span>🇨🇴 Colombia</span>
+          <button onclick="verDetalle()">Ver más</button>
+        </div>
+      </div>
+
+      <div class="empleo-card" data-categoria="diseno" data-tipo="individual" data-pais="argentina">
+        <div class="empleo-top">
+          <span class="badge badge-individual">👤 Individual</span>
+          <span class="badge badge-cat">🎨 Diseño</span>
+        </div>
+        <h3>Diseñador Gráfico</h3>
+        <p class="empresa">Agencia Creativa BA</p>
+        <p class="descripcion">Agencia creativa busca diseñador gráfico con portafolio sólido y manejo de Adobe.</p>
+        <div class="empleo-footer">
+          <span>🇦🇷 Argentina</span>
+          <button onclick="verDetalle()">Ver más</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="../js/empleos.js"></script>
+</body>
+</html>
