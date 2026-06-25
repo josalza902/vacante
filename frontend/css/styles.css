@@ -1,0 +1,132 @@
+/* RESET Y BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+}
+
+/* NAVEGACIÓN */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.nav-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #555;
+}
+
+.btn-login {
+  background: #2563eb;
+  color: #fff !important;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+}
+
+/* HERO */
+.hero {
+  background: linear-gradient(135deg, #1e40af, #2563eb);
+  color: #fff;
+  text-align: center;
+  padding: 5rem 2rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+/* BARRA DE BÚSQUEDA */
+.search-bar {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.search-bar input {
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  width: 250px;
+}
+
+.search-bar button {
+  padding: 0.75rem 2rem;
+  background: #f59e0b;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.search-bar button:hover {
+  background: #d97706;
+}
+
+/* CATEGORÍAS */
+.categorias {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.categorias h2 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  color: #1e40af;
+}
+
+.categorias-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.categoria-card {
+  background: #f0f4ff;
+  border: 1px solid #dbeafe;
+  border-radius: 10px;
+  padding: 1.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.categoria-card:hover {
+  background: #2563eb;
+  color: #fff;
+  transform: translateY(-3px);
+}
