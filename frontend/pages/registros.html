@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro - Vacante</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/registro.css">
+</head>
+<body>
+
+  <!-- NAVEGACIÓN -->
+  <nav>
+    <div class="nav-logo">Vacante</div>
+    <div class="nav-links">
+      <a href="../index.html">Inicio</a>
+      <a href="#" class="btn-login">Iniciar sesión</a>
+    </div>
+  </nav>
+
+  <!-- FORMULARIO -->
+  <section class="registro-section">
+    <div class="registro-card">
+      <h2>Crear cuenta</h2>
+      <p class="registro-sub">¿Cómo quieres usar Vacante?</p>
+
+      <!-- TIPO DE USUARIO -->
+      <div class="tipo-grid">
+        <div class="tipo-card activo" data-tipo="candidato">
+          👤 Candidato
+        </div>
+        <div class="tipo-card" data-tipo="empresa">
+          🏢 Empresa
+        </div>
+        <div class="tipo-card" data-tipo="freelancer">
+          💻 Freelancer
+        </div>
+        <div class="tipo-card" data-tipo="reclutador">
+          🔍 Reclutador
+        </div>
+      </div>
+
+      <!-- CAMPOS -->
+      <div class="form-group">
+        <label>Nombre completo</label>
+        <input type="text" placeholder="Tu nombre">
+      </div>
+      <div class="form-group">
+        <label>Correo electrónico</label>
+        <input type="email" placeholder="tu@email.com">
+      </div>
+      <div class="form-group">
+        <label>Contraseña</label>
+        <input type="password" placeholder="Mínimo 8 caracteres">
+      </div>
+      <div class="form-group">
+        <label>País</label>
+        <select>
+          <option value="">Selecciona tu país</option>
+          <option>Colombia</option>
+          <option>México</option>
+          <option>Argentina</option>
+          <option>Chile</option>
+          <option>Perú</option>
+          <option>Venezuela</option>
+          <option>Ecuador</option>
+          <option>Bolivia</option>
+          <option>Uruguay</option>
+          <option>Paraguay</option>
+        </select>
+      </div>
+
+      <button class="btn-registro">Crear cuenta</button>
+
+      <p class="login-link">¿Ya tienes cuenta? <a href="#">Inicia sesión</a></p>
+    </div>
+  </section>
+
+  <script src="../js/registro.js"></script>
+</body>
+</html>
